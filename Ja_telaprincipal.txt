@@ -1,0 +1,51 @@
+private void cxValorCPFActionPerformed(java.awt.event.ActionEvent evt) {                                           
+        // TODO add your handling code here:
+    }                                          
+
+    private void BttesteActionPerformed(java.awt.event.ActionEvent evt) {                                        
+        String v1 = cxValorCPF.getText();
+        String v2 = cxValorCNPJ.getText();
+        ValidadorCPF c1 = new ValidadorCPF(v1);
+        ValidadorCNPJ c2 = new ValidadorCNPJ(v2);
+        boolean cpf = c1.validaCpf();
+        boolean cnpj = c2.validaCnpj();
+        
+        if(cpf == true ){
+            String r2 = "Númeração válida";
+            cxResultado1.setText(r2);
+        }else{
+            String r2 = "Númeração inválida";
+            cxResultado1.setText(r2);
+        }
+        if(cnpj == true ){
+            String r2 = "Númeração válida";
+            cxResultado.setText(r2);
+        }else{
+            String r2 = "Númeração inválida";
+            cxResultado.setText(r2);
+        }
+        
+    }                                       
+
+    private void cxResultadoActionPerformed(java.awt.event.ActionEvent evt) {                                            
+        // TODO add your handling code here:
+    }                                           
+
+    private void btSairActionPerformed(java.awt.event.ActionEvent evt) {                                       
+       System.exit(0);
+    }                                      
+
+    private void btLimparActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        cxValorCPF.setText("");
+        cxResultado.setText("");
+        cxResultado1.setText("");
+        cxValorCNPJ.setText("");
+    }                                        
+
+    private void cxValorCNPJActionPerformed(java.awt.event.ActionEvent evt) {                                            
+        // TODO add your handling code here:
+    }                                           
+
+    private void cxResultado1ActionPerformed(java.awt.event.ActionEvent evt) {                                             
+        // TODO add your handling code here:
+    }    
